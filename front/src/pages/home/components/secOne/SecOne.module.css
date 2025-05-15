@@ -1,0 +1,67 @@
+.container {
+    background-image: url(https://preview.colorlib.com/theme/vegefoods/images/bg_1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.texts {
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 70%;
+    text-align: center;
+    h1 {
+        font-family: 'amatic sc';
+        font-size: 9rem;
+        color: #fff;
+        margin: 0;
+        font-weight: 100;
+      
+    }
+
+    p {
+        font-family: 'poppins';
+        font-size: 1rem;
+        color: #fff;
+        margin: 0;
+    }
+
+    button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #82ae46;
+        color: #fff;
+        font-family: 'poppins';
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 20px;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .texts {
+        h1 {
+        font-size: 6rem !important;
+    }
+    }
+    
+}

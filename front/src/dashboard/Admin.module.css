@@ -1,0 +1,120 @@
+.container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgb(236, 236, 236);
+    position: relative;
+
+    .buttons {
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        gap: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        button {
+            background-color: #82ae46;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    }
+
+    .image {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .content .price {
+
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+
+.card:hover {
+    .buttons {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .price {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    img {
+        scale: 1.2;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+}
+
+.sortFilter {
+    form {
+        display: flex;
+        gap: 10px;
+        padding: 40px;
+
+        input {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(236, 236, 236);
+        }
+
+        button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(236, 236, 236);
+            background-color: #82ae46;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .texts {
+        text-align: center;
+    }
+
+    .sortFilter form{
+        flex-direction: column;
+        padding: 0px;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        padding: 0px;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+    }
+    
+}
+

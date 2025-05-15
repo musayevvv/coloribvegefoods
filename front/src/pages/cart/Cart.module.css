@@ -1,0 +1,74 @@
+.container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid rgb(236, 236, 236);
+    position: relative;
+
+    .buttons {
+        position: absolute;
+        bottom: 10px;
+        display: flex;
+        gap: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+
+        button {
+            background-color: #82ae46;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    }
+
+    .image {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    .content .price {
+
+        transition: opacity 0.3s ease-in-out;
+    }
+}
+
+.card:hover {
+    .buttons {
+        opacity: 1;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    .price {
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+    }
+
+    img {
+        scale: 1.2;
+        transition: all 0.3s ease-in-out;
+    }
+
+
+}
